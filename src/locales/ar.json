@@ -1,0 +1,72 @@
+{
+  "header": {
+    "products": "المنتجات",
+    "orders": "طلباتي",
+    "admin": "المشرف",
+    "logout": "تسجيل الخروج",
+    "cart": "السلة"
+  },
+  "auth": {
+    "welcomeBack": "مرحبًا بعودتك!",
+    "hello": "مرحبًا، يا صديقي!",
+    "name": "الاسم الكامل",
+    "namePlaceholder": "أدخل اسمك الكامل",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "confirmPasswordPlaceholder": "أعد كتابة كلمة المرور",
+    "noAccount": "ليس لديك حساب؟",
+    "haveAccount": "لديك حساب بالفعل؟",
+    "signIn": "تسجيل الدخول",
+    "signUp": "تسجيل حساب",
+    "loading": "جاري التحميل...",
+    "fieldRequired": "هذا الحقل مطلوب",
+    "invalidEmail": "بريد إلكتروني غير صالح",
+    "passwordLength": "يجب أن تكون كلمة المرور على الأقل ٦ أحرف",
+    "passwordsMatch": "يجب أن تتطابق كلمات المرور",
+    "InvalidCredentials": "بيانات الاعتماد غير صالحة"
+  },
+  "products": {
+    "title": "المنتجات",
+    "search": "ابحث عن منتجات",
+    "category": "الفئة",
+    "allCategories": "جميع الفئات",
+    "priceRange": "نطاق السعر",
+    "addToCart": "أضف إلى السلة",
+    "description": "الوصف",
+    "noProducts": "لا توجد منتجات",
+    "stock": "متوفر في المخزون"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلة التسوق فارغة",
+    "total": "المجموع",
+    "checkout": "الدفع",
+    "remove": "إزالة",
+    "quantity": "الكمية",
+    "subtotal": "المجموع الفرعي"
+  },
+  "orders": {
+    "title": "طلباتي",
+    "noOrders": "ليس لديك أي طلبات بعد",
+    "orderId": "رقم الطلب",
+    "date": "التاريخ",
+    "items": "العناصر",
+    "status": "الحالة",
+    "pending": "قيد الانتظار",
+    "processing": "قيد المعالجة",
+    "shipped": "تم الشحن",
+    "delivered": "تم التسليم",
+    "cancelled": "ملغى"
+  },
+  "admin": {
+    "title": "لوحة التحكم",
+    "products": "إدارة المنتجات",
+    "orders": "إدارة الطلبات",
+    "addProduct": "إضافة منتج",
+    "delete": "حذف",
+    "viewDetails": "عرض التفاصيل"
+  }
+}

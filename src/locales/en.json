@@ -1,0 +1,72 @@
+{
+  "header": {
+    "products": "Products",
+    "orders": "My Orders",
+    "admin": "Admin Page",
+    "logout": "Logout",
+    "cart": "Cart"
+  },
+  "auth": {
+    "welcomeBack": "Welcome back!",
+    "hello": "Hello, Friend!",
+    "name": "Full Name",
+    "namePlaceholder": "Enter Your Full Name",
+    "email": "Email",
+    "emailPlaceholder": "Enter Your Email",
+    "password": "Password",
+    "passwordPlaceholder": "Enter Your Password",
+    "confirmPassword": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-Write Your Password",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "Loading...": "Loading",
+    "fieldRequired": "This field is required.",
+    "invalidEmail": "you need to type Your Email",
+    "passwordLength": "Password must contain at least 6 Char",
+    "passwordsMatch": "Password Dose'nt Match",
+    "InvalidCredentials":"Invalid credentials"
+  },
+  "products": {
+    "title": "Products",
+    "search": "Search products",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "priceRange": "Price Range",
+    "addToCart": "Add to Cart",
+    "description": "Description",
+    "noProducts": "No products found",
+    "stock": "In Stock"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal"
+  },
+  "orders": {
+    "title": "My Orders",
+    "noOrders": "You haven't placed any orders yet",
+    "orderId": "Order ID",
+    "date": "Date",
+    "items": "Items",
+    "status": "Status",
+    "pending": "Pending",
+    "processing": "Processing",
+    "shipped": "Shipped",
+    "delivered": "Delivered",
+    "cancelled": "Cancelled"
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "products": "Product Management",
+    "orders": "Order Management",
+    "addProduct": "Add Product",
+    "delete": "Delete",
+    "viewDetails": "View Details"
+  }
+}

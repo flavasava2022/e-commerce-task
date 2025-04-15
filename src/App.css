@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9;
+}
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+  
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+    }
