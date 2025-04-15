@@ -10,7 +10,7 @@ const LanguageSwitcher = () => {
     document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
     document.body.classList.toggle("rtl", lng === "ar");
   };
-  console.log(i18n.language);
+
   return (
     <div className="flex items-center justify-center gap-2">
       <p

@@ -1,17 +1,19 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 
 export default function FilterDrawer({ setFilters, filters }) {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center gap-4 ">
       <div className="flex flex-col gap-4 w-[95%]">
         <p className="py-1 border-b-2 border-black text-xl font-semibold text-black w-fit">
-          PRICE
+          {t("products.price")}
         </p>
         <input
           type="text"
-          placeholder="Search products..."
+          placeholder={t("products.search")}
           className="p-2 border-1 border-black rounded-lg outline-0"
           onChange={(e) =>
             dispatch(setFilters({ ...filters, searchTerm: e.target.value }))
@@ -21,7 +23,7 @@ export default function FilterDrawer({ setFilters, filters }) {
       </div>
       <div className="flex flex-col gap-4 w-[95%]">
         <p className="py-1 border-b-2 border-black text-xl font-semibold text-black w-fit">
-          Category
+          {t("products.category")}
         </p>
         <select
           onChange={(e) =>
@@ -30,12 +32,12 @@ export default function FilterDrawer({ setFilters, filters }) {
           value={filters?.category}
           className="p-2 border-1 border-black rounded-lg outline-0"
         >
-          <option value="">All Categories</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Clothes">Clothes</option>
-          <option value="Shoes">Shoes</option>
-          <option value="Furniture">Furniture</option>
-          <option value="Jewelry">Jewelry</option>
+          <option value="">{t("products.allCategories")}</option>
+          <option value="Electronics">{t("products.electronics")}</option>
+          <option value="Clothes">{t("products.clothes")}</option>
+          <option value="Shoes">{t("products.shoes")}</option>
+          <option value="Furniture">{t("products.furniture")}</option>
+          <option value="Jewelry">{t("products.jewelry")}</option>
         </select>
       </div>
     </div>

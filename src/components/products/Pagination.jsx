@@ -1,37 +1,52 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Pagination({
   currentPage,
   setCurrentPage,
   totalPages,
 }) {
+  const { i18n } = useTranslation();
+  const isRTL = i18n.dir();
+  const locale = i18n.language === "ar" ? "ar-EG" : i18n.language;
+
+  const numberFormatter = new Intl.NumberFormat(locale);
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const pages = isRTL === "rtl" ? pageNumbers : [...pageNumbers].reverse();
+
   return (
-    <div className="flex justify-center mt-6 gap-2">
+    <div
+      className={`flex justify-center mt-6 gap-2 ${
+        isRTL === "ltr" ? "flex-row-reverse" : "flex-row"
+      }`}
+    >
       <button
         className="disabled:opacity-50 text-primary cursor-pointer"
         onClick={() => setCurrentPage((p) => p - 1)}
         disabled={currentPage === 1}
       >
-        <ChevronLeft size={32} />
+        <ChevronRight size={32} />
       </button>
-      {Array.from({ length: totalPages }, (_, i) => (
+
+      {pages.map((page) => (
         <button
-          key={i}
+          key={page}
           className={`px-3 py-1 border rounded-md cursor-pointer ${
-            currentPage === i + 1 ? "bg-primary text-white" : ""
+            currentPage === page ? "bg-primary text-white" : ""
           }`}
-          onClick={() => setCurrentPage(i + 1)}
+          onClick={() => setCurrentPage(page)}
         >
-          {i + 1}
+          {numberFormatter.format(page)}
         </button>
       ))}
+
       <button
         className="disabled:opacity-50 text-primary cursor-pointer"
         onClick={() => setCurrentPage((p) => p + 1)}
         disabled={currentPage === totalPages}
       >
-        <ChevronRight size={32} />
+        <ChevronLeft size={32} />
       </button>
     </div>
   );

@@ -29,16 +29,22 @@
     "InvalidCredentials": "بيانات الاعتماد غير صالحة"
   },
   "products": {
-    "title": "المنتجات",
-    "search": "ابحث عن منتجات",
-    "category": "الفئة",
-    "allCategories": "جميع الفئات",
-    "priceRange": "نطاق السعر",
-    "addToCart": "أضف إلى السلة",
-    "description": "الوصف",
-    "noProducts": "لا توجد منتجات",
-    "stock": "متوفر في المخزون"
-  },
+  "filter": "تصفية",
+  "price": "السعر",
+  "clothes": "الملابس",
+  "electronics": "الإلكترونيات",
+  "shoes": "الأحذية",
+  "furniture": "الأثاث",
+  "jewelry": "المجوهرات",
+  "search": "ابحث عن المنتجات",
+  "category": "الفئة",
+  "allCategories": "كل الفئات",
+  "priceRange": "نطاق السعر",
+  "addToCart": "أضف إلى السلة",
+  "description": "الوصف",
+  "noProducts": "لم يتم العثور على منتجات",
+  "stock": "المتوفر في المخزون"
+},
   "cart": {
     "title": "سلة التسوق",
     "empty": "سلة التسوق فارغة",

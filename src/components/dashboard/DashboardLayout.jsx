@@ -16,13 +16,15 @@ export default function DashboardLayout() {
   return (
     <main className="relative scrollbar  min-h-screen bg-white">
       <div className="flex items-center justify-between w-full p-2 shadow">
-        <NavLink to="/dashboard">
+        <NavLink to="/dashboard" className="hidden md:flex">
           <img src={logo} alt="" className="w-[50px]" />
         </NavLink>
 
         <Navbar />
 
-        <LanguageSwitcher />
+        <div className="hidden md:block">
+          <LanguageSwitcher />
+        </div>
       </div>
 
       <div className="h-auto">

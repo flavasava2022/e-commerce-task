@@ -9,7 +9,7 @@ export default function Navbar() {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   return (
-    <nav className="flex gap-2">
+    <nav className="flex gap-2 text-[12px] md:text-[16px]">
       <NavLink
         end={true}
         to="/dashboard"

@@ -26,10 +26,16 @@
     "invalidEmail": "you need to type Your Email",
     "passwordLength": "Password must contain at least 6 Char",
     "passwordsMatch": "Password Dose'nt Match",
-    "InvalidCredentials":"Invalid credentials"
+    "InvalidCredentials": "Invalid credentials"
   },
   "products": {
-    "title": "Products",
+    "filter": "Filter",
+    "price": "Price",
+    "clothes": "Clothes",
+    "electronics": "Electronics",
+    "shoes": "Shoes",
+    "furniture": "Furniture",
+    "jewelry": "Jewelry",
     "search": "Search products",
     "category": "Category",
     "allCategories": "All Categories",
