@@ -14,21 +14,20 @@ export default function DashboardLayout() {
     return <Navigate to="/" replace />;
   }
   return (
-    <main className="relative scrollbar  min-h-screen bg-white">
-      <div className="flex items-center justify-between w-full p-2 shadow">
+    <main className="relative min-h-screen bg-white scrollbar">
+      <div className="w-full shadow p-2 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
         <NavLink to="/dashboard" className="hidden md:flex">
-          <img src={logo} alt="" className="w-[50px]" />
+          <img src={logo} alt="Logo" className="w-[50px]" />
         </NavLink>
 
         <Navbar />
 
-        <div className="hidden md:block">
+        <div className="flex justify-end md:block">
           <LanguageSwitcher />
         </div>
       </div>
 
       <div className="h-auto">
-        {" "}
         <Outlet />
       </div>
     </main>

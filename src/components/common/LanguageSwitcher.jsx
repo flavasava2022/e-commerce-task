@@ -12,24 +12,14 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-2">
-      <p
-        onClick={() => changeLanguage("en")}
-        className={`${
-          i18n?.language === "en" ? "font-bold text-primary" : ""
-        } cursor-pointer`}
-      >
-        English
-      </p>
-      <p
-        onClick={() => changeLanguage("ar")}
-        className={`${
-          i18n?.language === "ar" ? "font-bold text-primary" : ""
-        } cursor-pointer`}
-      >
-        العربية
-      </p>
-    </div>
+    <select
+      onChange={(e) => changeLanguage(e.target.value)}
+      value={i18n?.language}
+      className="p-2 border-1 border-gray-300 rounded-lg outline-0"
+    >
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+    </select>
   );
 };
 

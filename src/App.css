@@ -3,6 +3,14 @@
 .rtl {
   direction: rtl;
   text-align: right;
+  .modal {
+
+      right: 50%;
+  
+      width: 30rem;
+      max-width: 90%;
+      z-index: 10;
+    }
 }
 .backdrop {
   position: fixed;

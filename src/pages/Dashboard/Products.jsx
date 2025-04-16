@@ -86,7 +86,7 @@ export default function Products() {
           <ProductCard product={product} layout={layout} key={product?.id} />
         ))}
       </div>
-      {currentProducts.length > 10 && (
+      {filteredProducts.length > 10 && (
         <Pagination
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}

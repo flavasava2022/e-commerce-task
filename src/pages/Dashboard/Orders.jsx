@@ -21,7 +21,7 @@ export default function Orders() {
           <p className="font-bold text-gray-300">{t("cart.empty")}</p>
         </div>
       ) : (
-        <div className="grow max-h-[40vh] overflow-auto">
+        <div className="grow overflow-auto">
           <OrdersTable orders={orders} />
         </div>
       )}

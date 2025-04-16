@@ -15,7 +15,6 @@ export default function OrdersAdmin() {
     userNumber: "",
   });
   const orders = useSelector((state) => state?.orders);
-  console.log(orders);
   const user = useSelector((state) => state.auth.user);
   const filteredOrders = orders?.filter((product) => {
     const matchesUsers =
@@ -47,7 +46,7 @@ export default function OrdersAdmin() {
           <p className="font-bold text-gray-300">{t("cart.empty")}</p>
         </div>
       ) : (
-        <div className="grow max-h-[40vh] overflow-auto">
+        <div className="grow  overflow-auto">
           <OrdersTable orders={filteredOrders} role={user?.role} />
         </div>
       )}

@@ -14,7 +14,7 @@ export default function Modal({ title, children, onClose }) {
       />
       <motion.dialog
         open
-        className="modal translate-x-[-50%] translate-y-[-50%] shadow p-4 rounded-2xl flex flex-col gap-4 items-center"
+        className="modal rtl:translate-x-[50%]  translate-x-[-50%] translate-y-[-50%] shadow p-4 rounded-2xl flex flex-col gap-4 items-center"
         key="modal"
         initial={{ rotateY: -90, opacity: 0 }}
         animate={{ rotateY: 0, opacity: 1 }}

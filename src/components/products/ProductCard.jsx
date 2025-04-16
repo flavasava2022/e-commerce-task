@@ -2,7 +2,20 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { useTranslation } from "react-i18next";
-import imageTrail from "../../assets/home-schooling-color-icon.svg";
+import clothesDemo from "../../assets/clothes.jpg";
+import electronicsDemo from "../../assets/electronics.jpg";
+import furnitureDemo from "../../assets/furniture.jpg";
+import jewelryDemo from "../../assets/jewelry.jpg";
+import mobileDemo from "../../assets/mobile.jpg";
+import shoesDemo from "../../assets/shoes.jpg";
+const categoryImages = {
+  clothes: clothesDemo,
+  electronics: electronicsDemo,
+  furniture: furnitureDemo,
+  jewelry: jewelryDemo,
+  mobile: mobileDemo,
+  shoes: shoesDemo,
+};
 export default function ProductCard({ product, layout }) {
   const dispatch = useDispatch();
 
@@ -14,7 +27,7 @@ export default function ProductCard({ product, layout }) {
       } gap-2 items-center `}
     >
       <img
-        src={imageTrail}
+        src={categoryImages[product?.category?.toLowerCase()]}
         alt=""
         className={` bg-cover  max-h-[20vh] ${
           layout === "grid" ? "w-[90%]" : ""
