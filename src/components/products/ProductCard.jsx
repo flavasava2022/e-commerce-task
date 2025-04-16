@@ -8,6 +8,7 @@ import furnitureDemo from "../../assets/furniture.jpg";
 import jewelryDemo from "../../assets/jewelry.jpg";
 import mobileDemo from "../../assets/mobile.jpg";
 import shoesDemo from "../../assets/shoes.jpg";
+import { Link } from "react-router-dom";
 const categoryImages = {
   clothes: clothesDemo,
   electronics: electronicsDemo,
@@ -22,7 +23,7 @@ export default function ProductCard({ product, layout }) {
   const { t } = useTranslation();
   return (
     <div
-      className={`product-card h-[40vh] md:h-[37vh] flex ${
+      className={`product-card  flex ${
         layout === "grid" ? "flex-col justify-between" : "justify-start"
       } gap-2 items-center `}
     >
@@ -49,6 +50,11 @@ export default function ProductCard({ product, layout }) {
             ? t("products.outOfStock")
             : t("products.addToCart")}
         </button>
+        <Link to={`/dashboard/product/${product?.id}`} className="w-full">
+          <button className="bg-secondary cursor-pointer rounded-md p-2 text-white  font-[inter] w-full">
+            {t("orders.seeDetails")}
+          </button>
+        </Link>
       </div>
     </div>
   );

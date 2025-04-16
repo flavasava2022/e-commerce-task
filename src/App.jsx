@@ -14,6 +14,7 @@ import Cart from "./pages/Dashboard/Cart";
 import Orders from "./pages/Dashboard/Orders";
 import AdminPage from "./pages/Dashboard/AdminPage";
 import ErrorPage from "./pages/Dashboard/ErrorPage";
+import ProductPage from "./pages/Dashboard/ProductPage";
 
 function App() {
   const route = createBrowserRouter([
@@ -28,6 +29,7 @@ function App() {
         { path: "/dashboard/cart", element: <Cart /> },
         { path: "/dashboard/orders", element: <Orders /> },
         { path: "/dashboard/admin", element: <AdminPage /> },
+        { path: "/dashboard/product/:id", element: <ProductPage /> },
       ],
     },
   ]);

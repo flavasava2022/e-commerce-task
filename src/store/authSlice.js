@@ -13,7 +13,6 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     login(state, action) {
-
       const { email, password } = action.payload;
       const user = mockUsers.find(
         (user) => user.email === email && user.password === password
@@ -35,17 +34,23 @@ const authSlice = createSlice({
       localStorage.removeItem("user");
     },
     register(state, action) {
-
-      const newUser = {
-        ...action.payload,
-        id: Date.now(),
-        role: "customer",
-      };
-      mockUsers.push(newUser);
-      state.user = newUser;
-      state.isAuthenticated = true;
+      const existingEmail = mockUsers.find(
+        (user) => user.email === action.payload?.email
+      );
+      if (existingEmail) {
+        toast.error(`This Email Already Exist`);
+      } else {
+        const newUser = {
+          ...action.payload,
+          id: Date.now(),
+          role: "customer",
+        };
+        mockUsers.push(newUser);
+        state.user = newUser;
+        state.isAuthenticated = true;
         toast.success(`Welcome Back ${newUser?.name}`);
-      localStorage.setItem("user", JSON.stringify(newUser));
+        localStorage.setItem("user", JSON.stringify(newUser));
+      }
     },
   },
 });

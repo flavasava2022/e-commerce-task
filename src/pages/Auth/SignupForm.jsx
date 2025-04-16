@@ -32,7 +32,6 @@ const SignupForm = () => {
     let errors = {};
     setErrorMsg(null);
     inputValidate(userData, errors);
-    console.log(errors);
     animate(`input`, { borderColor: "#D0D5DD" });
     if (Object.keys(errors).length > 0) {
       Object.keys(errors).forEach((key) => {
