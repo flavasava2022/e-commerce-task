@@ -37,24 +37,31 @@
     "furniture": "Furniture",
     "jewelry": "Jewelry",
     "searchPlaceholder": "Search products",
-        "search": "Search",
+    "search": "Search",
     "category": "Category",
     "allCategories": "All Categories",
+    "allStatus": "All Status",
+    "allUsers": "All Users",
     "priceRange": "Price Range",
     "addToCart": "Add to Cart",
     "description": "Description",
     "noProducts": "No products found",
     "stock": "In Stock",
-    "outOfStock":"Out of stock"
+    "outOfStock": "Out of stock"
   },
   "cart": {
-    "title": "Shopping Cart",
+    "title": "Order Summary",
     "empty": "Your cart is empty",
     "total": "Total",
     "checkout": "Checkout",
     "remove": "Remove",
     "quantity": "Quantity",
-    "subtotal": "Subtotal"
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "discount": "Discount",
+    "price": "Price",
+    "product": "Product",
+    "free": "Free"
   },
   "orders": {
     "title": "My Orders",
@@ -67,14 +74,34 @@
     "processing": "Processing",
     "shipped": "Shipped",
     "delivered": "Delivered",
-    "cancelled": "Cancelled"
+    "seeDetails": "See Details",
+    "editOrderStatus":"Edit Order Status",
+    "OrderStatusHistory":"Order Status History"
   },
   "admin": {
     "title": "Admin Dashboard",
     "products": "Product Management",
     "orders": "Order Management",
+    "users": "Users Management",
     "addProduct": "Add Product",
     "delete": "Delete",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "actions": "Actions",
+    "addNewProduct": "Add New Product",
+    "productName": "Product Name",
+    "productNamePlaceholder": "Enter Product Name",
+    "price": "Price",
+    "pricePlaceholder": "Enter Product Price",
+    "inStock": "Enter Product Quantity",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter Product Description",
+    "close": "Close",
+    "create": "Create",
+    "totalProducts": "Total Products",
+    "editProduct": "Edit Product",
+    "update": "Update",
+    "loading": "Loading...",
+    "orderStatus": "Order Status",
+    "user": "User"
   }
 }

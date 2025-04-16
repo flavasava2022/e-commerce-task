@@ -11,17 +11,23 @@ import { useSelector } from "react-redux";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Products from "./pages/Dashboard/Products";
 import Cart from "./pages/Dashboard/Cart";
+import Orders from "./pages/Dashboard/Orders";
+import AdminPage from "./pages/Dashboard/AdminPage";
+import ErrorPage from "./pages/Dashboard/ErrorPage";
 
 function App() {
   const route = createBrowserRouter([
     { path: "/", element: <AuthPage /> },
     {
       path: "/dashboard",
+      errorElement: <ErrorPage />,
       element: <DashboardLayout />,
 
       children: [
         { path: "/dashboard", element: <Products /> },
         { path: "/dashboard/cart", element: <Cart /> },
+        { path: "/dashboard/orders", element: <Orders /> },
+        { path: "/dashboard/admin", element: <AdminPage /> },
       ],
     },
   ]);

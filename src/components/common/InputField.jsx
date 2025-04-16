@@ -33,7 +33,6 @@ export const InputField = ({
           <input
             type={type}
             name={name}
-            max={40}
             placeholder={placeHolder}
             className="border-[#D0D5DD] border-[1px] p-2 rounded-md font-[inter] w-full outline-0"
             defaultValue={formState?.defaultValues?.[name]}

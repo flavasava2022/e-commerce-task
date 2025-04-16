@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { setFilters } from "../../store/productsSlice";
-import { addToCart } from "../../store/cartSlice";
+
 import { useDispatch, useSelector } from "react-redux";
 import Drawer from "../../components/common/Drawer";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,7 +14,11 @@ export default function Products() {
 
   const [filterIsOpen, setFilterIsOpen] = useState(false);
   const [layout, setLayout] = useState("grid");
-  const { products, filters } = useSelector((state) => state.products);
+  const { products } = useSelector((state) => state.products);
+  const [filters, setFilters] = useState({
+    category: "",
+    searchTerm: "",
+  });
   const [currentPage, setCurrentPage] = useState(1);
   const filteredProducts = products?.filter((product) => {
     const matchesSearch =
@@ -25,10 +28,8 @@ export default function Products() {
         .includes(filters?.searchTerm.toLowerCase());
     const matchesCategory =
       !filters.category || product.category === filters.category;
-    const matchesPrice =
-      product.price >= filters.priceRange[0] &&
-      product.price <= filters.priceRange[1];
-    return matchesSearch && matchesCategory && matchesPrice;
+
+    return matchesSearch && matchesCategory;
   });
   const totalPages = Math.ceil(filteredProducts?.length / 10);
   const start = (currentPage - 1) * 10;
@@ -85,11 +86,13 @@ export default function Products() {
           <ProductCard product={product} layout={layout} key={product?.id} />
         ))}
       </div>
-      <Pagination
-        setCurrentPage={setCurrentPage}
-        currentPage={currentPage}
-        totalPages={totalPages}
-      />
+      {currentProducts.length > 10 && (
+        <Pagination
+          setCurrentPage={setCurrentPage}
+          currentPage={currentPage}
+          totalPages={totalPages}
+        />
+      )}
       <AnimatePresence>
         {filterIsOpen && (
           <Drawer setIsOpen={setFilterIsOpen} title={t("products.filter")}>

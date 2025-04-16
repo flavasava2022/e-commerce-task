@@ -37,7 +37,8 @@
     "furniture": "الأثاث",
     "jewelry": "المجوهرات",
     "searchPlaceholder": "ابحث عن المنتجات",
-
+"allStatus": "كل الحالات",
+"allUsers": "جميع المستخدمين",
     "search": "ابحث",
     "category": "الفئة",
     "allCategories": "كل الفئات",
@@ -49,13 +50,18 @@
     "outOfStock": "غير متوفر"
   },
   "cart": {
-    "title": "سلة التسوق",
+    "title": "ملخص الطلب",
     "empty": "سلة التسوق فارغة",
-    "total": "المجموع",
+    "total": "الإجمالي",
     "checkout": "الدفع",
     "remove": "إزالة",
     "quantity": "الكمية",
-    "subtotal": "المجموع الفرعي"
+    "subtotal": "الإجمالي الفرعي",
+    "shipping": "الشحن",
+    "discount": "الخصم",
+    "price": "السعر",
+    "product": "المنتج",
+    "free": "مجاني"
   },
   "orders": {
     "title": "طلباتي",
@@ -68,14 +74,34 @@
     "processing": "قيد المعالجة",
     "shipped": "تم الشحن",
     "delivered": "تم التسليم",
-    "cancelled": "ملغى"
+    "seeDetails": "مشاهدة التفاصيل",
+    "editOrderStatus": "تعديل حالة الطلب",
+    "OrderStatusHistory": "سجل حالة الطلب"
   },
   "admin": {
     "title": "لوحة التحكم",
     "products": "إدارة المنتجات",
     "orders": "إدارة الطلبات",
+    "users": "إدارة المستخدمين",
     "addProduct": "إضافة منتج",
     "delete": "حذف",
-    "viewDetails": "عرض التفاصيل"
+    "viewDetails": "عرض التفاصيل",
+    "actions": "الإجراءات",
+    "addNewProduct": "إضافة منتج جديد",
+    "productName": "اسم المنتج",
+    "productNamePlaceholder": "أدخل اسم المنتج",
+    "price": "السعر",
+    "pricePlaceholder": "أدخل سعر المنتج",
+    "inStock": "أدخل كمية المنتج",
+    "description": "الوصف",
+    "descriptionPlaceholder": "أدخل وصف المنتج",
+    "close": "إغلاق",
+    "create": "إنشاء",
+    "totalProducts": "إجمالي المنتجات",
+    "editProduct": "تعديل المنتج",
+    "update": "تحديث",
+    "loading": "جارٍ التحميل...",
+    "orderStatus": "حالة الطلب",
+    "user": "المستخدم"
   }
 }

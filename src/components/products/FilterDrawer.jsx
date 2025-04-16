@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 
 export default function FilterDrawer({ setFilters, filters }) {
-  const dispatch = useDispatch();
   const { t } = useTranslation();
   return (
     <div className="flex flex-col items-center justify-center gap-4 ">
@@ -16,7 +15,9 @@ export default function FilterDrawer({ setFilters, filters }) {
           placeholder={t("products.searchPlaceholder")}
           className="p-2 border-1 border-gray-300  rounded-lg outline-0"
           onChange={(e) =>
-            dispatch(setFilters({ ...filters, searchTerm: e.target.value }))
+            setFilters((prevState) => {
+              return { ...prevState, searchTerm: e.target.value };
+            })
           }
           value={filters?.searchTerm}
         />
@@ -27,7 +28,9 @@ export default function FilterDrawer({ setFilters, filters }) {
         </p>
         <select
           onChange={(e) =>
-            dispatch(setFilters({ ...filters, category: e.target.value }))
+            setFilters((prevState) => {
+              return { ...prevState, category: e.target.value };
+            })
           }
           value={filters?.category}
           className="p-2 border-1 border-gray-300 rounded-lg outline-0"

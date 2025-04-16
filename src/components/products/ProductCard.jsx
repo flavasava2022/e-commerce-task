@@ -9,14 +9,16 @@ export default function ProductCard({ product, layout }) {
   const { t } = useTranslation();
   return (
     <div
-      className={`product-card h-[35vh] flex ${
+      className={`product-card h-[40vh] md:h-[37vh] flex ${
         layout === "grid" ? "flex-col justify-between" : "justify-start"
       } gap-2 items-center `}
     >
       <img
         src={imageTrail}
         alt=""
-        className={` max-h-[20vh] ${layout === "grid" ? "w-[90%]" : ""}`}
+        className={` bg-cover  max-h-[20vh] ${
+          layout === "grid" ? "w-[90%]" : ""
+        }`}
       />
       <div className="w-full flex items-center justify-between gap-2 flex-col grow h-full">
         <h3>{product.name}</h3>

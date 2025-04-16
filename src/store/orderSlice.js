@@ -10,12 +10,13 @@ const ordersSlice = createSlice({
     userId: 2,
     items: [/* product items */],
     total: 1999.98,
-    status: 'pending',
+    status: [{status:'pending',date:'2024-03-20'}],
     date: '2024-03-20'
   }
 ],
   reducers: {
     placeOrder(state, action) {
+        
       state.push(action.payload);
       localStorage.setItem('orders', JSON.stringify(state));
       toast.success('Congrats Your Order Now In Pending Status')
@@ -23,8 +24,10 @@ const ordersSlice = createSlice({
     updateOrderStatus(state, action) {
       const order = state.find(o => o.id === action.payload.id);
       if (order) {
-        order.status = action.payload.status;
+
+        order.status.push({...action.payload.status})
         localStorage.setItem('orders', JSON.stringify(state));
+              toast.success('Order Status Changed')
       }
     }
   }

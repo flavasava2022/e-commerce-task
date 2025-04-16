@@ -1,4 +1,4 @@
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 import { useAnimate } from "motion/react";
 
@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { InputField } from "../../components/common/InputField";
 import { useTranslation } from "react-i18next";
 import { inputValidate } from "../../utils/forms";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../store/authSlice";
 const SignupForm = () => {
   const { t } = useTranslation();
@@ -19,6 +19,14 @@ const SignupForm = () => {
   const navigate = useNavigate();
   const [scope, animate] = useAnimate();
   const [errorMsg, setErrorMsg] = useState(null);
+
+  const user = useSelector((state) => state.auth.isAuthenticated);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/dashboard");
+    }
+  }, [user, navigate]);
   async function signupActions(pervData, formData) {
     const userData = Object.fromEntries(formData);
     let errors = {};
