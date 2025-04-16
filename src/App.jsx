@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
 import Products from "./pages/Dashboard/Products";
+import Cart from "./pages/Dashboard/Cart";
 
 function App() {
   const route = createBrowserRouter([
@@ -18,7 +19,10 @@ function App() {
       path: "/dashboard",
       element: <DashboardLayout />,
 
-      children: [{ path: "/dashboard", element: <Products /> }],
+      children: [
+        { path: "/dashboard", element: <Products /> },
+        { path: "/dashboard/cart", element: <Cart /> },
+      ],
     },
   ]);
 

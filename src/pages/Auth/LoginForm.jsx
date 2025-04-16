@@ -25,12 +25,11 @@ const LoginForm = () => {
       navigate("/dashboard");
     }
   }, [user, navigate]);
-  console.log(user);
   async function signupActions(pervData, formData) {
     const userData = Object.fromEntries(formData);
 
     let errors = {};
-    console.log(errors);
+
     setErrorMsg(null);
     inputValidate(userData, errors, t);
     animate(`input`, { borderColor: "#D0D5DD" });

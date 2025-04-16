@@ -22,7 +22,7 @@ export default function Navbar() {
         {t("header.products")}
       </NavLink>
       <NavLink
-        to="dashboard/cart"
+        to="/dashboard/cart"
         className={({ isActive }) =>
           isActive
             ? "text-primary p-2 font-semibold border-b-2"

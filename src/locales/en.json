@@ -36,14 +36,16 @@
     "shoes": "Shoes",
     "furniture": "Furniture",
     "jewelry": "Jewelry",
-    "search": "Search products",
+    "searchPlaceholder": "Search products",
+        "search": "Search",
     "category": "Category",
     "allCategories": "All Categories",
     "priceRange": "Price Range",
     "addToCart": "Add to Cart",
     "description": "Description",
     "noProducts": "No products found",
-    "stock": "In Stock"
+    "stock": "In Stock",
+    "outOfStock":"Out of stock"
   },
   "cart": {
     "title": "Shopping Cart",

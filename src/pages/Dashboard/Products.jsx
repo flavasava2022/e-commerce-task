@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { setFilters } from "../../store/productsSlice";
-import { addToCart } from "../../store/ordersSlice";
+import { addToCart } from "../../store/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Drawer from "../../components/common/Drawer";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,14 +8,14 @@ import FilterDrawer from "../../components/products/FilterDrawer";
 import { LayoutGrid, SlidersHorizontal, StretchHorizontal } from "lucide-react";
 import Pagination from "../../components/products/Pagination";
 import { useTranslation } from "react-i18next";
+import ProductCard from "../../components/products/ProductCard";
 
 export default function Products() {
   const { t } = useTranslation();
-  const dispatch = useDispatch();
+
   const [filterIsOpen, setFilterIsOpen] = useState(false);
   const [layout, setLayout] = useState("grid");
   const { products, filters } = useSelector((state) => state.products);
-  const { user } = useSelector((state) => state.auth);
   const [currentPage, setCurrentPage] = useState(1);
   const filteredProducts = products?.filter((product) => {
     const matchesSearch =
@@ -47,7 +47,7 @@ export default function Products() {
         <div className="flex items-center justify-between gap-2 h-full p-1">
           <motion.button
             onClick={() => setLayout("grid")}
-            className=" text-primary p-1 rounded-lg h-full"
+            className=" text-primary p-1 rounded-lg h-full cursor-pointer"
             animate={{
               background:
                 layout === "grid" ? "var(--color-primary)" : "rgba(0, 0, 0, 0)",
@@ -62,7 +62,7 @@ export default function Products() {
 
           <motion.button
             onClick={() => setLayout("flex")}
-            className=" text-primary p-1 rounded-lg h-full"
+            className=" text-primary p-1 rounded-lg h-full cursor-pointer"
             animate={{
               background:
                 layout === "flex" ? "var(--color-primary)" : "rgba(0, 0, 0, 0)",
@@ -79,17 +79,10 @@ export default function Products() {
       <div
         className={`${
           layout === "grid" ? "product-grid" : "flex flex-col gap-2 "
-        } w-full  max-h-[60vh] overflow-auto content-between`}
+        } w-full  max-h-[74vh] overflow-auto content-between`}
       >
         {currentProducts?.map((product) => (
-          <div key={product.id} className="product-card h-[40vh]">
-            <h3>{product.name}</h3>
-            <p>${product.price}</p>
-            <button onClick={() => dispatch(addToCart(product))}>
-              {t("products.addToCart")}
-            </button>
-            {user?.role === "admin" && <></>}
-          </div>
+          <ProductCard product={product} layout={layout} key={product?.id} />
         ))}
       </div>
       <Pagination

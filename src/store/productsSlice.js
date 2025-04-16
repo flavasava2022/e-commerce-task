@@ -3,12 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 // Initial products data
 const initialProducts = [
   { id: 1, name: "Smartphone X1", price: 599.99, category: "Electronics", stock: 50, description: "Latest smartphone with great features", image: "/images/electronics1.jpg" },
-  { id: 2, name: "Leather Jacket", price: 129.99, category: "Clothes", stock: 30, description: "Stylish leather jacket for all seasons", image: "/images/clothes1.jpg" },
+  { id: 2, name: "Leather Jacket", price: 129.99, category: "Clothes", stock: 0, description: "Stylish leather jacket for all seasons", image: "/images/clothes1.jpg" },
   { id: 3, name: "Running Shoes", price: 89.99, category: "Shoes", stock: 45, description: "Comfortable and durable running shoes", image: "/images/shoes1.jpg" },
   { id: 4, name: "Wooden Desk", price: 299.99, category: "Furniture", stock: 20, description: "Spacious desk made from oak wood", image: "/images/furniture1.jpg" },
   { id: 5, name: "Diamond Necklace", price: 999.99, category: "Jewelry", stock: 10, description: "Elegant necklace with real diamonds", image: "/images/jewelry1.jpg" },
   { id: 6, name: "Bluetooth Headphones", price: 79.99, category: "Electronics", stock: 60, description: "Wireless headphones with noise cancellation", image: "/images/electronics2.jpg" },
-  { id: 7, name: "Summer Dress", price: 49.99, category: "Clothes", stock: 35, description: "Lightweight and comfortable dress", image: "/images/clothes2.jpg" },
+  { id: 7, name: "Summer Dress", price: 49.99, category: "Clothes", stock: 0, description: "Lightweight and comfortable dress", image: "/images/clothes2.jpg" },
   { id: 8, name: "Formal Shoes", price: 109.99, category: "Shoes", stock: 25, description: "Perfect for business and formal events", image: "/images/shoes2.jpg" },
   { id: 9, name: "Modern Sofa", price: 699.99, category: "Furniture", stock: 15, description: "Comfortable 3-seater with sleek design", image: "/images/furniture2.jpg" },
   { id: 10, name: "Gold Bracelet", price: 449.99, category: "Jewelry", stock: 12, description: "Delicate bracelet made from pure gold", image: "/images/jewelry2.jpg" },

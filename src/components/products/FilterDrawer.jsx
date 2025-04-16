@@ -9,12 +9,12 @@ export default function FilterDrawer({ setFilters, filters }) {
     <div className="flex flex-col items-center justify-center gap-4 ">
       <div className="flex flex-col gap-4 w-[95%]">
         <p className="py-1 border-b-2 border-black text-xl font-semibold text-black w-fit">
-          {t("products.price")}
+          {t("products.search")}
         </p>
         <input
           type="text"
-          placeholder={t("products.search")}
-          className="p-2 border-1 border-black rounded-lg outline-0"
+          placeholder={t("products.searchPlaceholder")}
+          className="p-2 border-1 border-gray-300  rounded-lg outline-0"
           onChange={(e) =>
             dispatch(setFilters({ ...filters, searchTerm: e.target.value }))
           }
@@ -30,7 +30,7 @@ export default function FilterDrawer({ setFilters, filters }) {
             dispatch(setFilters({ ...filters, category: e.target.value }))
           }
           value={filters?.category}
-          className="p-2 border-1 border-black rounded-lg outline-0"
+          className="p-2 border-1 border-gray-300 rounded-lg outline-0"
         >
           <option value="">{t("products.allCategories")}</option>
           <option value="Electronics">{t("products.electronics")}</option>
