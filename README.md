@@ -18,6 +18,22 @@ This is a fully responsive E-Commerce Order Management System built with **React
 - **🖼 Image Handling:** Upload Base64-encoded images, stored in localStorage.
 - **🔀 Routing:** Seamless navigation using React Router.
 
+## 🧪 Test Credentials
+
+Use the following credentials to explore the system:
+
+### 👑 Admin
+
+- **Username:** `admin@Ecommerce.com`
+- **Password:** `admin123`
+
+### 🙋‍♂️ Regular User
+
+- **Username:** `user@Ecommerce.com`
+- **Password:** `user123`
+
+➡️ Users can also **register new accounts** directly through the interface.
+
 ## 🧭 Usage Guide
 
 ### 👑 Admin Role
