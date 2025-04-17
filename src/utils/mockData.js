@@ -23,7 +23,7 @@ export const MockProducts = [
     category: "Electronics",
     stock: 50,
     description: "Latest smartphone with great features",
-    image: "/images/electronics.jpg",
+    image: "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ export const MockProducts = [
     category: "Clothes",
     stock: 0,
     description: "Stylish leather jacket for all seasons",
-    image: "/images/clothes.jpg",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const MockProducts = [
     category: "Shoes",
     stock: 45,
     description: "Comfortable and durable running shoes",
-    image: "/images/shoes.jpg",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const MockProducts = [
     category: "Furniture",
     stock: 20,
     description: "Spacious desk made from oak wood",
-    image: "/images/furniture.jpg",
+    image: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ export const MockProducts = [
     category: "Jewelry",
     stock: 10,
     description: "Elegant necklace with real diamonds",
-    image: "/images/jewelry.jpg",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ export const MockProducts = [
     category: "Electronics",
     stock: 60,
     description: "Wireless headphones with noise cancellation",
-    image: "/images/electronics.jpg",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ export const MockProducts = [
     category: "Clothes",
     stock: 0,
     description: "Lightweight and comfortable dress",
-    image: "/images/clothes.jpg",
+    image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 8,
@@ -86,7 +86,7 @@ export const MockProducts = [
     category: "Shoes",
     stock: 25,
     description: "Perfect for business and formal events",
-    image: "/images/shoes.jpg",
+    image: "https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 9,
@@ -95,7 +95,7 @@ export const MockProducts = [
     category: "Furniture",
     stock: 15,
     description: "Comfortable 3-seater with sleek design",
-    image: "/images/furniture.jpg",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 10,
@@ -104,7 +104,7 @@ export const MockProducts = [
     category: "Jewelry",
     stock: 12,
     description: "Delicate bracelet made from pure gold",
-    image: "/images/jewelry.jpg",
+    image: "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 11,
@@ -113,7 +113,7 @@ export const MockProducts = [
     category: "Electronics",
     stock: 40,
     description: "Tracks fitness, health, and notifications",
-    image: "/images/electronics.jpg",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 12,
@@ -122,7 +122,7 @@ export const MockProducts = [
     category: "Clothes",
     stock: 18,
     description: "Heavy-duty coat for cold weather",
-    image: "/images/clothes.jpg",
+    image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 13,
@@ -131,7 +131,7 @@ export const MockProducts = [
     category: "Shoes",
     stock: 50,
     description: "Everyday shoes with comfort and style",
-    image: "/images/shoes.jpg",
+    image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 14,
@@ -140,7 +140,7 @@ export const MockProducts = [
     category: "Furniture",
     stock: 22,
     description: "Tall and sturdy for all your books",
-    image: "/images/furniture.jpg",
+    image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 15,
@@ -149,7 +149,7 @@ export const MockProducts = [
     category: "Jewelry",
     stock: 8,
     description: "Elegant pearls with silver setting",
-    image: "/images/jewelry.jpg",
+    image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 16,
@@ -158,7 +158,7 @@ export const MockProducts = [
     category: "Electronics",
     stock: 33,
     description: "High-res screen and long battery life",
-    image: "/images/electronics.jpg",
+    image: "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 17,
@@ -167,7 +167,7 @@ export const MockProducts = [
     category: "Clothes",
     stock: 42,
     description: "Classic fit and durable denim",
-    image: "/images/clothes.jpg",
+    image: "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 18,
@@ -176,7 +176,7 @@ export const MockProducts = [
     category: "Shoes",
     stock: 20,
     description: "Waterproof and rugged for any trail",
-    image: "/images/shoes.jpg",
+    image: "https://images.unsplash.com/photo-1605348532760-6753d2c38e80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 19,
@@ -185,7 +185,7 @@ export const MockProducts = [
     category: "Furniture",
     stock: 10,
     description: "Seats up to six, modern wood finish",
-    image: "/images/furniture.jpg",
+    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 20,
@@ -194,7 +194,7 @@ export const MockProducts = [
     category: "Jewelry",
     stock: 5,
     description: "Luxury ring with ruby centerpiece",
-    image: "/images/jewelry.jpg",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 21,
@@ -203,7 +203,7 @@ export const MockProducts = [
     category: "Electronics",
     stock: 70,
     description: "Fast charging for compatible phones",
-    image: "/images/electronics.jpg",
+    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 22,
@@ -212,7 +212,7 @@ export const MockProducts = [
     category: "Clothes",
     stock: 55,
     description: "Soft cotton hoodie with pockets",
-    image: "/images/clothes.jpg",
+    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 23,
@@ -221,7 +221,7 @@ export const MockProducts = [
     category: "Shoes",
     stock: 60,
     description: "Easy to wear, perfect for everyday",
-    image: "/images/shoes.jpg",
+    image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
   {
     id: 24,
@@ -230,6 +230,6 @@ export const MockProducts = [
     category: "Furniture",
     stock: 17,
     description: "Ergonomic and adjustable",
-    image: "/images/furniture.jpg",
+    image: "https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
   },
-]
+];

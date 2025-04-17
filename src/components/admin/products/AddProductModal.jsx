@@ -9,10 +9,12 @@ import { CircleX } from "lucide-react";
 import { InputField } from "../../common/InputField";
 import Modal from "../../common/Modal";
 import { useDispatch } from "react-redux";
-import { updateProduct } from "../../../store/productsSlice";
+import { addProduct } from "../../../store/productsSlice";
 import { useTranslation } from "react-i18next";
+import ImageUpload from "../../common/ImageUpload";
 
 export default function AddProductModal({ onClose }) {
+  const [previewUrl, setPreviewUrl] = useState(null);
   const dispatch = useDispatch();
   const [scope, animate] = useAnimate();
   const [errorMsg, setErrorMsg] = useState(null);
@@ -21,7 +23,10 @@ export default function AddProductModal({ onClose }) {
     const productData = Object.fromEntries(formData);
     let errors = {};
     setErrorMsg(null);
-
+    console.log(productData);
+    if (productData?.pic?.size === 0) {
+      errors.pic = "This field is required.";
+    }
     if (productData?.productName?.trim().length === 0) {
       errors.productName = "This field is required.";
     }
@@ -50,13 +55,13 @@ export default function AddProductModal({ onClose }) {
       return { errors: errors, defaultValues: pervData };
     } else {
       dispatch(
-        updateProduct({
+        addProduct({
           category: productData?.category,
           description: productData?.description,
           name: productData?.productName,
           price: Number(productData?.price),
           stock: Number(productData?.inStock),
-          image: `/images/${productData?.category}.jpg`,
+          image: previewUrl,
         })
       );
       onClose();
@@ -92,16 +97,19 @@ export default function AddProductModal({ onClose }) {
             type="text"
             placeHolder={t("admin.productNamePlaceholder")}
           />
-          <div className="w-[50%] flex flex-col gap-2 h-full">
+          <div className="w-[50%] flex flex-col gap-2 h-full mb-[16px]">
             <label htmlFor="category" className="text-[14px]  font-bold">
               {t("products.category")}
             </label>
             <select
               id="category"
+              name="category"
               value={formState?.defaultValues?.category}
               className="p-2 border-1 border-gray-300 rounded-lg outline-0"
             >
-              <option value="">{t("products.allCategories")}</option>
+              <option value="" disabled={true}>
+                {t("products.allCategories")}
+              </option>
               <option value="Electronics">{t("products.electronics")}</option>
               <option value="Clothes">{t("products.clothes")}</option>
               <option value="Shoes">{t("products.shoes")}</option>
@@ -126,6 +134,7 @@ export default function AddProductModal({ onClose }) {
             placeHolder={t("admin.inStock")}
           />
         </div>
+
         <InputField
           label={t("admin.description")}
           name="description"
@@ -134,6 +143,12 @@ export default function AddProductModal({ onClose }) {
           placeHolder={t("admin.descriptionPlaceholder")}
           width={"full"}
         />
+        <ImageUpload
+          formState={formState}
+          previewUrl={previewUrl}
+          setPreviewUrl={setPreviewUrl}
+        />
+
         {errorMsg && (
           <div className="flex  items-center gap-2 p-2  bg-red-500 text-white rounded-lg">
             <CircleX className="w-[18px] text-danger" /> {errorMsg}

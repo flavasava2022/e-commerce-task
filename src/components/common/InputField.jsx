@@ -49,7 +49,7 @@ export const InputField = ({
           {formState?.errors?.[name] && (
             <CircleX className="w-[18px] text-danger" />
           )}
-          <span>{t(`auth.${formState?.errors?.[name]}`)} </span>{" "}
+          <span>{t(`${formState?.errors?.[name]}`)} </span>{" "}
         </span>
       </p>
     </div>

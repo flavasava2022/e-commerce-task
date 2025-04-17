@@ -3,21 +3,7 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
-import clothesDemo from "../../assets/clothes.jpg";
-import electronicsDemo from "../../assets/electronics.jpg";
-import furnitureDemo from "../../assets/furniture.jpg";
-import jewelryDemo from "../../assets/jewelry.jpg";
-import mobileDemo from "../../assets/mobile.jpg";
-import shoesDemo from "../../assets/shoes.jpg";
 
-const categoryImages = {
-  clothes: clothesDemo,
-  electronics: electronicsDemo,
-  furniture: furnitureDemo,
-  jewelry: jewelryDemo,
-  mobile: mobileDemo,
-  shoes: shoesDemo,
-};
 export default function ProductPage() {
   const { t, i18n } = useTranslation();
   const { id } = useParams();
@@ -37,7 +23,7 @@ export default function ProductPage() {
   return (
     <div className="p-4 max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
       <img
-        src={categoryImages[product?.category?.toLowerCase()]}
+        src={product?.image}
         alt={product.name}
         className="w-full md:w-1/2 h-auto rounded-xl shadow"
       />
@@ -56,7 +42,7 @@ export default function ProductPage() {
         <p>{product.description}</p>
 
         <button
-          className="bg-primary text-white py-2 px-4 rounded-xl w-fit hover:opacity-90"
+          className="bg-primary text-white py-2 px-4 rounded-xl w-fit cursor-pointer"
           onClick={() => dispatch(addToCart(product))}
         >
           {t("products.addToCart")}

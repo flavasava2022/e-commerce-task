@@ -8,21 +8,6 @@ import EditProductBtn from "./EditProductBtn";
 import { AnimatePresence } from "motion/react";
 import Drawer from "../../common/Drawer";
 import FilterDrawer from "../../products/FilterDrawer";
-import clothesDemo from "../../../assets/clothes.jpg";
-import electronicsDemo from "../../../assets/electronics.jpg";
-import furnitureDemo from "../../../assets/furniture.jpg";
-import jewelryDemo from "../../../assets/jewelry.jpg";
-import mobileDemo from "../../../assets/mobile.jpg";
-import shoesDemo from "../../../assets/shoes.jpg";
-
-const categoryImages = {
-  clothes: clothesDemo,
-  electronics: electronicsDemo,
-  furniture: furnitureDemo,
-  jewelry: jewelryDemo,
-  mobile: mobileDemo,
-  shoes: shoesDemo,
-};
 
 export default function ProductsAdmin() {
   const [filterIsOpen, setFilterIsOpen] = useState(false);
@@ -31,7 +16,7 @@ export default function ProductsAdmin() {
     category: "",
     searchTerm: "",
   });
-
+  console.log("hgfgf");
   const products = useSelector((state) => state?.products?.products);
   const filteredProducts = products?.filter((product) => {
     const matchesSearch =
@@ -96,7 +81,7 @@ export default function ProductsAdmin() {
                   <td className="p-2">
                     <div className="flex items-center gap-2">
                       <img
-                        src={categoryImages[item?.category?.toLowerCase()]}
+                        src={item?.image}
                         alt=""
                         className="w-[60px] h-[60px] hidden md:block"
                       />
@@ -147,7 +132,7 @@ export default function ProductsAdmin() {
           >
             <div className="flex items-center gap-4">
               <img
-                src={categoryImages[item?.category?.toLowerCase()]}
+                src={item?.image}
                 alt=""
                 className="w-[60px] h-[60px] rounded-md object-cover"
               />

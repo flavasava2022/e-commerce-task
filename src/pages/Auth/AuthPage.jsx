@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../components/common/LanguageSwitcher";
 const AuthPage = () => {
+  console.log("fdgghdg");
   const [login, setLogin] = useState(true);
   const isDesktop = useMediaQuery({
     query: "(min-width: 1224px)",

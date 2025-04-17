@@ -2,21 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { useTranslation } from "react-i18next";
-import clothesDemo from "../../assets/clothes.jpg";
-import electronicsDemo from "../../assets/electronics.jpg";
-import furnitureDemo from "../../assets/furniture.jpg";
-import jewelryDemo from "../../assets/jewelry.jpg";
-import mobileDemo from "../../assets/mobile.jpg";
-import shoesDemo from "../../assets/shoes.jpg";
+
 import { Link } from "react-router-dom";
-const categoryImages = {
-  clothes: clothesDemo,
-  electronics: electronicsDemo,
-  furniture: furnitureDemo,
-  jewelry: jewelryDemo,
-  mobile: mobileDemo,
-  shoes: shoesDemo,
-};
+
 export default function ProductCard({ product, layout }) {
   const dispatch = useDispatch();
 
@@ -28,12 +16,13 @@ export default function ProductCard({ product, layout }) {
       } gap-2 items-center `}
     >
       <img
-        src={categoryImages[product?.category?.toLowerCase()]}
+        src={product?.image}
         alt=""
-        className={` bg-cover  max-h-[20vh] ${
+        className={` object-fill max-h-full h-[15vh] max-w-full  ${
           layout === "grid" ? "w-[90%]" : ""
         }`}
       />
+
       <div className="w-full flex items-center justify-between gap-2 flex-col grow h-full">
         <h3>{product.name}</h3>
         <p>${product.price}</p>

@@ -3,21 +3,6 @@ import { addToCart, removeFromCart } from "../../store/cartSlice";
 import { useDispatch } from "react-redux";
 import { Minus, Plus } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import clothesDemo from "../../assets/clothes.jpg";
-import electronicsDemo from "../../assets/electronics.jpg";
-import furnitureDemo from "../../assets/furniture.jpg";
-import jewelryDemo from "../../assets/jewelry.jpg";
-import mobileDemo from "../../assets/mobile.jpg";
-import shoesDemo from "../../assets/shoes.jpg";
-
-const categoryImages = {
-  clothes: clothesDemo,
-  electronics: electronicsDemo,
-  furniture: furnitureDemo,
-  jewelry: jewelryDemo,
-  mobile: mobileDemo,
-  shoes: shoesDemo,
-};
 
 export default function Table({ cart, isRTL, numberFormatter }) {
   const dispatch = useDispatch();
@@ -42,7 +27,7 @@ export default function Table({ cart, isRTL, numberFormatter }) {
                 <td className="p-2">
                   <div className="flex items-center gap-2">
                     <img
-                      src={categoryImages[item?.category?.toLowerCase()]}
+                      src={item?.image}
                       className="w-[60px] h-[60px] hidden md:block object-cover"
                       alt=""
                     />
@@ -104,7 +89,7 @@ export default function Table({ cart, isRTL, numberFormatter }) {
           >
             <div className="flex gap-4 items-center">
               <img
-                src={categoryImages[item?.category?.toLowerCase()]}
+                src={item?.image}
                 className="w-20 h-20 object-cover rounded"
                 alt=""
               />
