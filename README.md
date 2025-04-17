@@ -1,12 +1,44 @@
-# React + Vite
+# 🛒 E-Commerce Order Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 **Live Demo**  
+[View Live Site](https://e-commerce-task-psi.vercel.app/)
 
-Currently, two official plugins are available:
+## 📦 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a fully responsive E-Commerce Order Management System built with **React (no TypeScript)**. It replicates a real-world admin panel with full CRUD functionality, multilingual support, and localStorage-based persistence.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **🔐 Role-Based Authentication:** Distinct experiences for admins and regular users.
+- **🛍 Product Management:** Add, edit, delete products with real-time validation and animation.
+- **📋 Order Management:** Track, filter (by status, user ID, date, price), and update orders.
+- **🌍 Multilingual Support:** English and Arabic interface with full RTL layout.
+- **💻 Responsive UI:** Fully responsive design using Tailwind CSS and Flexbox.
+- **📦 State Management:** Global state using Redux Toolkit.
+- **🖼 Image Handling:** Upload Base64-encoded images, stored in localStorage.
+- **🔀 Routing:** Seamless navigation using React Router.
+
+## 🧭 Usage Guide
+
+### 👑 Admin Role
+
+- 🛠 **Manage Products**: Add new products or update/delete existing ones.
+- 📦 **Edit Product Info**: Modify stock, price, and descriptions.
+- 📋 **Orders Panel**: View orders and change their status (e.g., pending, shipped).
+- 🌍 **Language Toggle**: Switch between Arabic and English.
+
+### 🙋‍♂️ User Role
+
+- 🛍 **Browse Products**: View all products by category.
+- 🛒 **Cart System**: Add items to cart and place orders.
+- 💾 **LocalStorage Sync**: All actions persist across sessions.
+- 🌍 **Language Toggle**: Switch between Arabic and English.
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/flavasava2022/e-commerce-task.git
+cd e-commerce-task
+npm install
+npm run dev
+```
