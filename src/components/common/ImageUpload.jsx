@@ -21,7 +21,7 @@ const ImageUpload = ({ product, formState, previewUrl, setPreviewUrl }) => {
       <motion.label
         htmlFor="pic"
         style={{ cursor: "pointer" }}
-        className="w-full bg-[#d9e6fe] h-[200px] rounded-xl flex items-center justify-center flex-col gap-2 relative"
+        className="w-full bg-[#d9e6fe] h-fit rounded-xl flex items-center justify-center flex-col gap-2 relative p-2"
         whileHover={{
           backgroundColor: "#7b9fe7",
           transition: { duration: 0.3 },

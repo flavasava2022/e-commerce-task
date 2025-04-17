@@ -49,7 +49,7 @@ export default function EditProductModal({ onClose, product }) {
         );
       });
 
-      return { errors: errors, defaultValues: pervData };
+      return { errors: errors, defaultValues: productData };
     } else {
       dispatch(
         updateProduct({

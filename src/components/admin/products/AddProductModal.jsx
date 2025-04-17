@@ -52,7 +52,7 @@ export default function AddProductModal({ onClose }) {
         );
       });
 
-      return { errors: errors, defaultValues: pervData };
+      return { errors: errors, defaultValues: productData };
     } else {
       dispatch(
         addProduct({
@@ -107,7 +107,7 @@ export default function AddProductModal({ onClose }) {
               value={formState?.defaultValues?.category}
               className="p-2 border-1 border-gray-300 rounded-lg outline-0"
             >
-              <option value="" disabled={true}>
+              <option value="" disabled={true} selected>
                 {t("products.allCategories")}
               </option>
               <option value="Electronics">{t("products.electronics")}</option>
